@@ -23,6 +23,7 @@ public class UserResource {
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Uni<User> hello(@PathParam("id") String id) {
+        System.out.println("user select");
         return client
                 .preparedQuery("select id,name from user where id = ?")
                 .execute(Tuple.of(id))
