@@ -31,7 +31,7 @@ public class S3Logic {
 
         // S3アクセスクライアントの生成
         AmazonS3 client = AmazonS3ClientBuilder.standard()
-                .withCredentials(new AWSStaticCredentialsProvider(credentials))
+//                .withCredentials(new AWSStaticCredentialsProvider(credentials))
                 .withRegion(Regions.AP_NORTHEAST_1)
                 .build();
 
